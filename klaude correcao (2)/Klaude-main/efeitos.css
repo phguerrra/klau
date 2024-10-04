@@ -1,0 +1,191 @@
+body{
+    position: relative;
+    font-family: 'livvic', sans-serif;
+    background-color: rgb(241, 241, 241);
+    margin: 0;
+    padding: 0;
+}
+.cont{
+    position: relative;
+}
+.logo{
+    font-size: 32px;
+    position: absolute;
+    top: 8%;
+    left: 07%;
+}
+nav{
+    position: relative;
+    color: orange;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+}
+.botao, .car, .profile {
+    position: absolute;
+    top: 10.5%;
+    margin-left: auto;
+}    
+.retan{
+    position: absolute;
+    top: 9.5%;
+    border: 2px solid chocolate;
+    left: 30.5%;
+    width: 800px;
+    height: 65px;
+    background-color: aliceblue;
+    border-radius: 40px;
+}
+.botao{
+    position: absolute;
+    left: 67%;
+}
+.car{
+    position: absolute;
+    width: 06%;
+    height: auto;
+    left: 79%;
+}
+.profile{
+    position: absolute;
+    left: 90%;
+    width: 04%;
+    height: auto;
+}
+.tela{
+    box-shadow: inset 0px 100px 100px hsla(0, 0%, 5%, 0.7);
+    background-image: url('img/bloco2.jpg');
+    background-size: cover;
+    background-position: center;
+    border-bottom: 2px solid chocolate;
+    margin: 0;
+    padding: 0;
+    width: 2395%;
+    height: 450px;
+    z-index: -1;
+}
+.retan1{
+    position: absolute;
+    top: 1600px;
+    width: 1900px;
+    height: 300px;
+    background-color: rgb(26, 26, 26);
+    background-size: cover;
+    background-position: center;
+    border-top: 2px solid chocolate;
+}
+.klau{
+    position: absolute;
+    top: 32%;
+    left: 05%;
+    font-size: 20px;
+    width: 400px;
+    color: aliceblue;
+    font-weight: bold;
+    z-index: 1;
+    line-height: 1.7;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /*3 colunas iguais*/
+    grid-template-rows: repeat(2, 100px); /* 2 linhas de 100px */
+    gap: 400px 20px;
+    padding: 0px;
+    margin-top: 3%;
+    margin-left: 07%;
+}
+.grid-item{
+    width: 300px;
+    height: auto;
+} 
+.gridbotao{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /*3 colunas iguais*/
+    grid-template-rows: repeat(2, 50px); /* 2 linhas de 100px */
+    row-gap: 460px;
+    column-gap: 250px;
+    padding: 0px;
+    margin-top: -18%;
+    margin-left: 18%;
+}
+.grid-botao{
+    width: 60px;
+    height: auto;
+    transition: transform 0.1s ease-in-out;
+}
+.grid-botao:active{
+    transform: scale(0.95);
+    transition: transform 0.1s ease;
+}  
+.gridtitulo{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /*3 colunas iguais*/
+    grid-template-rows: repeat(2, 100px); /* 2 linhas de 100px */
+    gap: 400px 20px;
+    padding: 0px;
+    margin-top: -24%;
+    margin-left: 07.5%;
+}
+.titulo{
+    font-size: 20px;
+    width: 250px;
+    height: auto;
+    font-weight: medium;
+}
+.dados{
+    position: absolute;
+    font-size: 20px;
+    top: 1600px;
+    left: 400px;
+    color: rgb(255, 255, 255);
+    line-height: 70px;
+    z-index: 2;
+} 
+.rodape{
+    position: relative;
+    padding: 20px;
+}
+.whats{
+    position: absolute;
+    top: 1770px;
+    left: 330px;
+    width: 40px;
+    height: auto;
+}
+.insta{
+    position: absolute;
+    top: 1700px;
+    left: 330px;
+    width: 40px;
+    height: auto;
+}
+.grid-item-container {
+    width: 300px;
+    height: 349px;
+    overflow: hidden;
+    display: inline-block;
+    margin: 5px;
+    border-radius: 30px;
+}
+
+.grid-item {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.grid-item-container:hover .grid-item {
+    transform: scale(1.1);
+}
+.header input[type="text"] {
+    border: 2px solid chocolate; /* Borda do campo de pesquisa */
+    padding: 8px 12px; /* Preenchimento interno do campo de pesquisa */
+    border-radius: 20px; /* Bordas arredondadas do campo de pesquisa */
+    width: 400px; /* Define a largura do campo de pesquisa */
+    transition: border 0.3s; /* Transição suave para a borda ao focar */
+}
+
+
