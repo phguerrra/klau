@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="pt-BR"> <!-- Define o idioma da página como português do Brasil -->
+<head>
+    <meta charset="UTF-8"> <!-- Define a codificação de caracteres como UTF-8 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Configura a visualização em dispositivos móveis -->
+    <title>Klauconsultoria</title> <!-- Define o título da página que aparece na aba do navegador -->
+    <style>
+        /* Estilos do corpo e cabeçalho */
+        body {
+            font-family: sans-serif; /* Define a fonte padrão da página */
+            margin: 0; /* Remove a margem padrão do navegador */
+            padding: 0; /* Remove o preenchimento padrão do navegador */
+            background-color: #ffffff; /* Define a cor de fundo da página como branca */
+            display: flex; /* Define o layout do corpo como um flex container */
+            flex-direction: column; /* Organiza os itens do flex container em uma coluna */
+            min-height: 100vh; /* Define a altura mínima do corpo como 100% da altura da janela de visualização */
+        }
+        .header {
+            background-color: rgb(26, 26, 26); /* Define a cor de fundo da barra de cabeçalho como um tom escuro */
+            padding: 10px 20px; /* Adiciona preenchimento de 10px em cima e embaixo, e 20px nas laterais */
+            border-bottom: 1px solid #ddd; /* Adiciona uma borda inferior de 1px sólida e de cor cinza claro */
+            display: flex; /* Define a barra de cabeçalho como um flex container */
+            justify-content: space-between; /* Distribui os itens uniformemente ao longo da barra */
+            align-items: center; /* Centraliza os itens verticalmente */
+        }
+        .header .logo {
+            color: chocolate; /* Define a cor do texto do logo como chocolate */
+        }
+        .header .search-container {
+            flex-grow: 1; /* Permite que a barra de pesquisa ocupe o espaço restante */
+            display: flex; /* Define a barra de pesquisa como um flex container */
+            justify-content: center; /* Centraliza a barra de pesquisa horizontalmente */
+        }
+        .header input[type="text"] {
+            border: 2px solid chocolate; /* Define a borda do campo de pesquisa como chocolate */
+            padding: 13px 15px; /* Adiciona preenchimento interno ao campo de pesquisa */
+            border-radius: 20px; /* Arredonda as bordas do campo de pesquisa */
+            width: 500px; /* Define a largura do campo de pesquisa */
+            transition: border 0.3s; /* Adiciona uma transição suave para a borda ao focar */
+        }
+        .header input[type="text"]:focus {
+            border-color: chocolate; /* Muda a cor da borda ao focar no campo de pesquisa */
+            outline: none; /* Remove o contorno padrão ao focar */
+        }
+        .header .search-icon {
+            margin-left: 10px; /* Adiciona margem à esquerda do ícone de pesquisa */
+            cursor: pointer; /* Muda o cursor ao passar o mouse sobre o ícone */
+        }
+        .header .cart-icon,
+        .header .user-icon {
+            cursor: pointer; /* Muda o cursor ao passar o mouse sobre os ícones */
+        }
+        .header .user-icon {
+            border-radius: 50%; /* Arredonda as bordas do ícone do usuário */
+            overflow: hidden; /* Oculta partes da imagem que ultrapassam a borda */
+            width: 50px; /* Define a largura do ícone do usuário */
+            height: 50px; /* Define a altura do ícone do usuário */
+        }
+        .container {
+            flex: 1; /* Permite que o contêiner ocupe o espaço restante */
+            max-width: 800px; /* Define a largura máxima do contêiner */
+            margin: 30px auto; /* Centraliza o contêiner horizontalmente e adiciona margem vertical */
+            background-color: #fff; /* Define a cor de fundo do contêiner como branca */
+            padding: 20px; /* Adiciona preenchimento interno ao contêiner */
+            border-radius: 5px; /* Arredonda as bordas do contêiner */
+        }
+        .pedidos-table {
+            width: 100%; /* Define a largura da tabela como 100% do contêiner */
+            border-collapse: collapse; /* Remove o espaço entre as bordas das células */
+        }
+        .pedidos-table th,
+        .pedidos-table td {
+            padding: 10px; /* Adiciona preenchimento interno às células */
+            text-align: left; /* Alinha o texto à esquerda nas células */
+            border-bottom: 1px solid #ddd; /* Adiciona uma borda inferior às células */
+        }
+        .pedidos-table th {
+            background-color: chocolate; /* Define a cor de fundo das células do cabeçalho como chocolate */
+            color: #fff; /* Define a cor do texto nas células do cabeçalho como branca */
+        }
+        .product-image {
+            width: 50px; /* Define a largura da imagem do produto */
+            height: 50px; /* Define a altura da imagem do produto */
+            margin-right: 10px; /* Adiciona margem à direita da imagem do produto */
+        }
+        .quantity-container {
+            display: flex; /* Define o contêiner de quantidade como um flex container */
+            align-items: center; /* Centraliza os itens verticalmente */
+        }
+        .quantity-button {
+            cursor: pointer; /* Muda o cursor ao passar o mouse sobre o botão */
+            background-color: chocolate; /* Define a cor de fundo do botão como chocolate */
+            color: white; /* Define a cor do texto do botão como branca */
+            border: none; /* Remove a borda padrão do botão */
+            border-radius: 5px; /* Arredonda as bordas do botão */
+            padding: 5px 10px; /* Adiciona preenchimento interno ao botão */
+            margin: 0 5px; /* Adiciona margem horizontal ao botão */
+        }
+        .footer {
+            background-color: rgb(26, 26, 26); /* Define a cor de fundo da barra de rodapé como um tom escuro */
+            color: #fff; /* Define a cor do texto no rodapé como branca */
+            padding: 20px; /* Adiciona preenchimento interno ao rodapé */
+            text-align: left; /* Alinha o texto à esquerda no rodapé */
+            display: flex; /* Define o rodapé como um flex container */
+            justify-content: space-between; /* Distribui os itens uniformemente ao longo do rodapé */
+        }
+        .footer a {
+            color: #fff; /* Define a cor do texto dos links como branca */
+            text-decoration: none; /* Remove o sublinhado dos links */
+        }
+        .footer a:hover {
+            text-decoration: underline; /* Adiciona sublinhado aos links ao passar o mouse */
+        }
+        .footer .icon {
+            margin: 0 10px; /* Adiciona margem horizontal aos ícones no rodapé */
+        }
+        .btn {
+            background-color: chocolate; /* Define a cor de fundo do botão como chocolate */
+            color: white; /* Define a cor do texto do botão como branca */
+            padding: 15px 32px; /* Adiciona preenchimento interno ao botão */
+            text-align: center; /* Centraliza o texto no botão */
+            text-decoration: none; /* Remove o sublinhado do texto do botão */
+            display: inline-block; /* Define o botão como um bloco em linha */
+            font-size: 16px; /* Define o tamanho da fonte do botão */
+            margin: 4px 2px; /* Adiciona margem ao botão */
+            cursor: pointer; /* Muda o cursor ao passar o mouse sobre o botão */
+            border-radius: 25px; /* Arredonda as bordas do botão */
+            border: white; /* Define a borda do botão como branca */
+        }
+        .delete-icon {
+            display: inline-flex; /* Define o ícone de exclusão como um flex container em linha */
+            align-items: center; /* Centraliza os itens verticalmente */
+            justify-content: center; /* Centraliza os itens horizontalmente */
+            cursor: pointer; /* Muda o cursor ao passar o mouse sobre o ícone */
+            transition: transform 0.2s; /* Adiciona uma transição suave ao transform do ícone */
+        }
+        .delete-icon:hover {
+            transform: scale(1.1); /* Aumenta o ícone de exclusão ao passar o mouse */
+        }
+        .delete-icon img {
+            width: 20px; /* Define a largura da imagem do ícone de exclusão */
+            height: 20px; /* Define a altura da imagem do ícone de exclusão */
+        }
+    </style>
+</head>
+<body>
+    <!-- The default language for the conversation below is Portuguese unless a specific language is mentioned by the user. -->
+    <header class="header">
+        <h1 class="logo">Klauconsultoria</h1> <!-- Título da empresa -->
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Pesquisar" class="search-input"> <!-- Campo de pesquisa -->
+            <span class="search-icon">
+                <img src="img/botao.svg" alt="botao" style="width: 45px; height:40px;"> <!-- Ícone de busca -->
+            </span>
+        </div>
+        <div style="display: flex; align-items: center; margin-left: auto;"> <!-- Adicionando margin-left: auto -->
+            <a href="index.html" class="cart-icon" style="margin-left: 10px;"> <!-- Ajuste a margem para aproximar -->
+                <img src="img/carrinho.svg" alt="carrinho" style="width: 200px; height: 45px;"> <!-- Ícone do carrinho -->
+            </a>
+            <span class="user-icon" style="margin-left: 10px;"> <!-- Ajuste a margem para aproximar -->
+                <img src="img/profile.svg" alt="Perfil" style="width: 100%; height: 100%; border-radius: 50%;"> <!-- Imagem do perfil do usuário -->
+            </span>
+        </div>
+    </header>
+    <div class="container">
+        <h2 style="text-align: left;">Pedidos</h2> <!-- Título da seção de pedidos -->
+        <table class="pedidos-table"> <!-- Tabela de pedidos -->
+            <thead>
+                <tr>
+                    <th>Nome</th> <!-- Cabeçalho da coluna para nome -->
+                    <th>Produto(s)</th> <!-- Cabeçalho da coluna para produtos -->
+                    <th>Quantidade</th> <!-- Cabeçalho da coluna para quantidade -->
+                    <th>Ação</th> <!-- Cabeçalho da coluna para ações -->
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Maria Sorte</td> <!-- Nome do cliente -->
+                    <td>
+                        <img src="itens/image 4.png" alt="Produto" class="product-image"> <!-- Imagem do produto -->
+                    </td>
+                    <td>
+                        <div class="quantity-container"> <!-- Contêiner para a quantidade -->
+                            <button class="quantity-button" onclick="changeQuantity(this, -1)">-</button> <!-- Botão para diminuir a quantidade -->
+                            <span class="quantity" id="quantity-1">1</span> <!-- Exibe a quantidade atual -->
+                            <button class="quantity-button" onclick="changeQuantity(this, 1)">+</button> <!-- Botão para aumentar a quantidade -->
+                        </div>
+                    </td>
+                    <td>
+                        <span class="delete-icon" onclick="deleteProduct(this)" style="cursor: pointer;"> <!-- Ícone de exclusão -->
+                            <img src="https://cdn.icon-icons.com/icons2/1791/PNG/512/trashcan_114640.png" alt="Excluir" style="width: 20px; height: 20px;"> <!-- Imagem do ícone de exclusão -->
+                        </span>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+        <div style="margin-top: 20px;">
+            <button class="btn add-product-button" onclick="addProduct()">Adicionar Produto</button> <!-- Botão para adicionar um novo produto -->
+        </div>
+    </div>
+    <div class="container">
+        <button class="btn finalize-button">Finalizar Reserva</button> <!-- Botão para finalizar a reserva -->
+    </div>
+    <script>
+        function changeQuantity(button, change) { // Função para alterar a quantidade de um produto
+            const quantitySpan = button.parentElement.querySelector('.quantity'); // Seleciona o elemento que exibe a quantidade
+            let currentQuantity = parseInt(quantitySpan.textContent); // Obtém a quantidade atual
+            let newQuantity = currentQuantity + change; // Calcula a nova quantidade
+            if (newQuantity >= 0) { // Verifica se a nova quantidade é válida
+                quantitySpan.textContent = newQuantity; // Atualiza a quantidade exibida
+            }
+        }
+        function deleteProduct(button) { // Função para excluir um produto da lista
+            button.closest('tr').remove(); // Remove a linha correspondente ao produto
+        }
+        function finalizeOrder() { // Função para finalizar a reserva
+            window.location.href = 'finalizar.html'; // Redireciona para a página de finalização
+        }
+        function addProduct() { // Função para adicionar um novo produto
+            alert('Adicionar novo produto (implementação necessária)'); // Exibe um alerta (implementação futura)
+        }
+        document.querySelectorAll('.delete-icon').forEach(icon => { // Adiciona evento de clique aos ícones de exclusão
+            icon.addEventListener('click', () => {
+                deleteProduct(icon); // Chama a função de exclusão ao clicar no ícone
+            });
+        });
+        document.querySelector('.finalize-button').addEventListener('click', finalizeOrder); // Adiciona evento de clique ao botão de finalizar
+        document.getElementById('search-input').addEventListener('keypress', function (event) { // Adiciona evento de tecla ao campo de pesquisa
+            if (event.key === 'Enter') { // Verifica se a tecla pressionada é "Enter"
+                const query = event.target.value; // Obtém o valor da pesquisa
+                window.location.href = `search.html?query=${encodeURIComponent(query)}`; // Redireciona para a página de pesquisa com a consulta
+            }
+        });
+    </script>
+    <footer class="footer">
+        <div>
+            <p>Endereço:</p> <!-- Texto para o endereço -->
+            <a href="#" class="icon">&#x1F4F0; @Klauconsultoria</a> <!-- Link para o endereço da empresa -->
+            <a href="#" class="icon">&#x1F4F1; 55 996385059</a> <!-- Link para o número de telefone -->
+        </div>
+    </footer>
+</body>
+</html>

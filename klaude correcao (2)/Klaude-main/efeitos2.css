@@ -1,0 +1,211 @@
+body{
+    position: relative;
+    font-family: 'livvic', sans-serif;
+    background-color: rgb(241, 241, 241);
+    margin: 0;
+    padding: 0;
+}
+.cont{
+    position: relative;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+.logo{
+    color: inherit;
+    font-size: 32px;
+    position: absolute;
+    top: 8%;
+    left: 07%;
+}
+nav{
+    position: relative;
+    color: orange;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1;
+    margin-top: 40px;
+}
+.botao, .car, .profile {
+    position: absolute;
+    margin-top: 3.5%;
+    margin-left: auto;
+}    
+.retan{
+    position: absolute;
+    top: 9.5%;
+    border: 2px solid chocolate;
+    left: 30.5%;
+    width: 800px;
+    height: 65px;
+    background-color: aliceblue;
+    border-radius: 40px;
+}
+.botao{
+    position: absolute;
+    left: 67%;
+}
+.car{
+    position: absolute;
+    width: 06%;
+    height: auto;
+    left: 79%;
+}
+.profile{
+    position: absolute;
+    left: 90%;
+    width: 04%;
+    height: auto;
+}
+.retan1{
+    position: absolute;
+    top: 1600px;
+    width: 1903px;
+    height: 300px;
+    background-color: rgb(26, 26, 26);
+    background-size: cover;
+    background-position: center;
+    border-top: 2px solid chocolate;
+}
+.klau{
+    position: absolute;
+    top: 32%;
+    left: 05%;
+    font-size: 20px;
+    width: 400px;
+    color: aliceblue;
+    font-weight: bold;
+    z-index: 1;
+    line-height: 1.7;
+}
+.dados{
+    position: absolute;
+    font-size: 20px;
+    top: 1600px;
+    left: 400px;
+    color: rgb(255, 255, 255);
+    line-height: 70px;
+    z-index: 2;
+} 
+.rodape{
+    position: relative;
+    padding: 20px;
+}
+.whats{
+    position: absolute;
+    top: 1770px;
+    left: 330px;
+    width: 40px;
+    height: auto;
+}
+.insta{
+    position: absolute;
+    top: 1700px;
+    left: 330px;
+    width: 40px;
+    height: auto;
+}
+.retan1{
+    position: absolute;
+    top: -80px;
+    left: 0;
+    width: 1900px;
+    height: 200px;
+    background-color: rgb(31, 31, 31);
+    z-index: -1;
+}
+.item{
+    position: absolute;
+    top: 200px;
+    left: 13%;
+    width: 23%;
+    height: auto;
+}
+.titulo{
+    position: absolute;
+    top: 180px;
+    left: 55%;
+    font-size: 34px;
+    font-weight: bolder;
+    color: black;
+}
+.preco{
+    position: absolute;
+    top: 255px;
+    left: 55%;
+    font-size: 30px;
+}
+.add{
+    position: absolute;
+    top: 330px;
+    left: 55%;
+    font-size: 34px;
+    border-radius: 20px;
+    width: 500px;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;    
+    color: aliceblue;
+    background-color: chocolate;
+}
+.quantidade{
+    position: absolute;
+    color: black;
+    top: 460px;
+    left: 55%;
+    font-size: 24px;
+}
+.grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /*3 colunas iguais*/
+    grid-template-rows: repeat(1, 100px); /* 2 linhas de 100px */
+    gap: 10px 0px;
+    margin: 400px;
+    padding: 100px;
+    margin-top: 23%;
+    margin-left: 50%;
+}
+.retan2{
+    width: 80px;
+    height: 50px;
+    border-radius: 10px;
+    background-color: rgb(107, 107, 107);
+}
+.retan3{
+    position: absolute;
+    top: 1600px;
+    width: 1903px;
+    height: 300px;
+    background-color: rgb(26, 26, 26);
+    background-size: cover;
+    background-position: center;
+    border-top: 2px solid chocolate;
+}
+.whats{
+    position: absolute;
+    top: 1770px;
+    left: 330px;
+    width: 40px;
+    height: auto;
+}
+.insta{
+    position: absolute;
+    top: 1700px;
+    left: 330px;
+    width: 40px;
+    height: auto;
+}
+.dados{
+    position: absolute;
+    font-size: 20px;
+    top: 1600px;
+    left: 400px;
+    color: rgb(255, 255, 255);
+    line-height: 70px;
+    z-index: 2;
+} 

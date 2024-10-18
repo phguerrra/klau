@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Klauconsultoria</title>
+    <link rel="stylesheet" href="efeitos.css"> <!-- Link para o CSS externo -->
+    <style>
+        body {
+            position: relative;
+            font-family: 'livvic', sans-serif;
+            background-color: rgb(241, 241, 241);
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 30px 30px;
+            background-color: rgb(26,26,26); /* Cor de fundo da barra */
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Sombra da barra */
+        }
+        .logo {
+            font-size: 32px;
+            color: chocolate; /* Cor do logo */
+            margin-right: auto; /* Adiciona margem à direita para empurrar outros itens para a direita */
+            top: 19px;
+            left: 20px;
+       
+        }
+        .search-container {
+            display: flex;
+            justify-content: center; /* Centraliza a barra de pesquisa */
+            flex-grow: 1; /* Permite que a barra de pesquisa ocupe o espaço restante */
+            margin: 0 90px; /* Margens laterais */
+        }
+        .search-container input[type="text"] {
+            border: 2px solid chocolate; /* Borda do campo de pesquisa */
+            padding: 14px 24px; /* Preenchimento interno do campo de pesquisa */
+            border-radius: 20px; /* Bordas arredondadas do campo de pesquisa */
+            width: 500px; /* Define a largura do campo de pesquisa */
+            transition: border 0.3s; /* Transição suave para a borda ao focar */
+        }
+        .icons-container {
+            display: flex;
+            align-items: center;
+        }
+        .icons-container img {
+            width: 60px; /* Tamanho dos ícones */
+            height: auto;
+            margin-left: 70px; /* Espaçamento entre os ícones */
+        }
+        .banner {
+            background-image: url('https://marcaspelomundo.com.br/wp-content/uploads/2022/02/1-e1645032981634-1536x653.png');
+            background-size: cover;
+            background-position: center;
+            height: 350px; /* Altura do banner */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: chocolate; /* Cor do texto no banner */
+            text-align: center;
+            
+            position: relative; /* Para posicionar o texto sobre a imagem */
+        }
+        .banner-text {
+            position: absolute; /* Permite que o texto fique sobre a imagem */
+            color:white; /* Cor do texto */
+            font-size: 25px; /* Tamanho do texto */
+            text-align: center;
+            z-index: 1; /* Para garantir que o texto fique acima da imagem */
+            top: 100px; /* Posição do texto no eixo Y */
+            left: 30px; /* Posição do texto no eixo X */
+            right: 1250px; /* Posição do texto no eixo X */
+        }
+        .footer {
+            padding: 20px;
+            background-color: #fff; /* Cor de fundo do rodapé */
+            text-align: center;
+        }
+        .social-icons {
+            display: flex;
+            justify-content: center;
+            gap: 15px; /* Espaçamento entre os ícones sociais */
+        }
+        .klau {
+            position: relative; /* Alterado para relative para não interferir no layout */
+            margin-top: 50px; /* Espaçamento acima do texto */
+            font-size: 20px;
+            width: 400px;
+            color: aliceblue;
+            font-weight: bold;
+            z-index: 1;
+            line-height: 1.7;
+            margin-bottom: 20px; /* Espaçamento abaixo do texto */
+        }
+        .cont {
+            margin-top: 50px; /* Espaçamento acima da seção de produtos */
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1 class="logo">Klauconsultoria</h1>
+        <div class="search-container">
+            <input type="text" id="search-input" placeholder="Pesquisar">
+            <span class="search-icon">
+                <img src="img/botao.svg" alt="botao" style="width: 45px; height:40px;">
+            </span>
+        </div>
+        <div class="icons-container">
+            <a href="carrinho.html" class="cart-icon">
+                <img src="img/carrinho.svg" alt="carrinho">
+            </a>
+            <span class="user-icon">
+                <img src="img/profile.svg" alt="Perfil" style="border-radius: 50%;">
+            </span>
+        </div>
+    </header>
+
+    <div class="banner">
+        <div class="banner-text">O Klauconsultoria é um site que facilita a reserva de produtos cosméticos, oferecendo uma experiência prática e personalizada para garantir que você tenha acesso rápido aos seus itens favoritos.</div>
+    </div>
+
+    
+
+    <div class="grid">
+        <a href="item1.html" class="grid-item-container">
+            <img src="itens/image 1.png" alt="Item 1" class="grid-item">
+        </a>
+        <a href="item2.html" class="grid-item-container">
+            <img src="itens/image 2.png" alt="Item 2" class="grid-item">
+        </a>
+        <a href="item3.html" class="grid-item-container">
+            <img src="itens/image 3.png" alt="Item 3" class="grid-item">
+        </a>
+        <a href="item4.html" class="grid-item-container">
+            <img src="itens/image 4.png" alt="Item 4" class="grid-item">
+        </a>
+        <a href="item5.html" class="grid-item-container">
+            <img src="itens/image 5.png" alt="Item 5" class="grid-item">
+        </a>
+        <a href="item6.html" class="grid-item-container">
+            <img src="itens/image 6.png" alt="Item 6" class="grid-item">
+        </a>
+        <a href="item7.html" class="grid-item-container">
+            <img src="itens/Rectangle 62.png" alt="Item 7" class="grid-item">
+        </a>
+        <a href="item8.html" class="grid-item-container">
+            <img src="itens/Rectangle 63.png" alt="Item 8" class="grid-item">
+        </a>
+    </div>
+    
+    <div class="gridbotao">
+        <img src="img/add.svg" class="grid-botao" style="position: relative; z-index: 1;">
+        <img src="img/add.svg" class="grid-botao" style="position: relative; z-index: 2;">
+        <img src="img/add.svg" class="grid-botao" style="position: relative; z-index: 3;">
+        <img src="img/add.svg" class="grid-botao" style="position: relative; z-index: 4;">
+        <img src="img/add.svg" class="grid-botao" style="position: relative; z-index: 5;">
+        <img src="img/add.svg" class="grid-botao" style="position: relative; z-index: 6;">
+        <img src="img/add.svg" class="grid-botao" style="position: relative; z-index: 7;">
+        <img src="img/add.svg" class="grid-botao" style="position: relative; z-index: 8;">
+    </div>
+
+    <div class="gridtitulo">
+        <div class="titulo">Essencial Masculino 100 ml<br>R$ 259, 90</div>
+        <div class="titulo">Essencial Masculino 100 ml<br>R$ 259, 90</div>
+        <div class="titulo">Essencial Masculino 100 ml<br>R$ 259, 90</div>
+        <div class="titulo">Essencial Masculino 100 ml<br>R$ 259, 90</div>
+        <div class="titulo">Essencial Masculino 100 ml<br>R$ 259, 90</div>
+        <div class="titulo">Essencial Masculino 100 ml<br>R$ 259, 90</div>
+        <div class="titulo">Essencial Masculino 100 ml<br>R$ 259, 90</div>
+        <div class="titulo">Essencial Masculino 100 ml<br>R$ 259, 90</div>
+    </div>
+
+    <div class="retan1"></div>
+    <img class="insta" src="img/Social Icons.svg">
+    <img class="whats" src="img/Vector.svg">
+
+
+    </div>
+</body>
+</html>
